@@ -3,6 +3,13 @@ var app = express();
 var mongoose = require('mongoose');
 var cors = require('cors');
 var War = require('./war');
+
+var originsWhitelist = [  
+  //'https://www.starlights.xyz',
+  //'https://test.starlights.xyz',
+  'http://localhost:3000',
+  //'https://blogs.starlights.xyz' 
+];
 var corsOptions = {
   origin: function(origin, callback){
   		//console.log(origin);
