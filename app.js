@@ -1,7 +1,7 @@
 var express = require('express');	
 var app = express();
 var mongoose = require('mongoose');
-
+var cors = require('cors');
 var War = require('./war');
 var corsOptions = {
   origin: function(origin, callback){
