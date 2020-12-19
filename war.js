@@ -104,3 +104,7 @@ module.exports.getKingsFilter = function(name, location, type, callback)
 	War.find({ $and: [{ $or: [{attacker_king: name}, {defender_king: name}]},{battle_type: type}, {location: location}]}, callback);
 }
 
+module.exports.getWars = function(callback)
+{
+	War.find({},callback);
+}

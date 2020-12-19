@@ -28,8 +28,17 @@ mongoose.set('useCreateIndex', true);
 var db = mongoose.connection;
 
 app.get('/', function(req, res){
-	console.log("Lodo");
-	res.send("Hellow");
+	War.getWars(function(err,wars){
+		if(err)
+		{
+			res.send({
+				success: false,
+                message: err
+			})
+		}
+		res.send(wars);	
+	});
+	
 })
 
 app.get('/list', function(req, res){
