@@ -3,6 +3,16 @@ var app = express();
 var mongoose = require('mongoose');
 
 var War = require('./war');
+var corsOptions = {
+  origin: function(origin, callback){
+  		//console.log(origin);
+        var isWhitelisted = originsWhitelist.indexOf(origin) !== -1;
+       // console.log(isWhitelisted);
+        callback(null, isWhitelisted);
+  }
+}
+
+app.use(cors(corsOptions))  
 
 mongoose.connect('mongodb+srv://starlight:abc123@socialb2b.frx0s.mongodb.net/gameofthrones?retryWrites=true&w=majority');
 mongoose.set('useNewUrlParser', true);
