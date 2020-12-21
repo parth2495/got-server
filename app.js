@@ -8,7 +8,7 @@ var originsWhitelist = [
   //'https://www.starlights.xyz',
   //'https://test.starlights.xyz',
   'http://localhost:3000',
-  'https://warm-headland-29968.herokuapp.com/'
+  'https://warm-headland-29968.herokuapp.com'
   //'https://blogs.starlights.xyz' 
 ];
 var corsOptions = {
