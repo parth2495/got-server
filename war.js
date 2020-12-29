@@ -84,7 +84,7 @@ var War = module.exports = mongoose.model('War', warSchema);
 module.exports.getListofNames = function(callback)
 {
 	console.log("Here");
-	War.distinct("location",{ location:1, _id:0 }, callback);
+	War.distinct("location", callback);
 }
 
 module.exports.getBattleCount = function(callback)
