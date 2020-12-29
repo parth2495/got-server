@@ -47,6 +47,7 @@ app.get('/list', function(req, res){
 	War.getListofNames(function(err, wars) {
 		if(err)
 		{
+			console.log(err);
 			res.send({
 				success: false,
                 message: err
